@@ -54,7 +54,7 @@ If you would like to output test results to a log file, you can run
 This will output the test results on the termainl and also output to the current directory as a log file, with 
 the name as the current date and time.  
 
-###Notes on Script and Approach
+### Notes on Script and Approach
 
 To preserve input format, I opted to use a `.txt` file it.  
 
