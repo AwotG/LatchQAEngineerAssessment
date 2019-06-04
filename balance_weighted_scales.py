@@ -51,7 +51,6 @@ def validate_and_parse_values(list_of_strings, type):
         sys.exit(ValueError)
 
     result_list = strings_to_ints(list_of_strings, type)
-
     return result_list
 
 
@@ -88,13 +87,13 @@ def strings_to_ints(list_of_strings, type):
 # Balancing scale algorithm
 ########################################################################################################################
 def check_values(scale_list, weight_list):
-    LEFT_SCALE = scale_list[0]
-    RIGHT_SCALE = scale_list[1]
+    left_scale = scale_list[0]
+    right_scale = scale_list[1]
 
     if len(weight_list) == 1:
-        return check_with_single_weight(LEFT_SCALE, RIGHT_SCALE, weight_list)
+        return check_with_single_weight(left_scale, right_scale, weight_list)
     elif len(weight_list) > 1:
-        return check_with_two_weights(LEFT_SCALE, RIGHT_SCALE, weight_list)
+        return check_with_two_weights(left_scale, right_scale, weight_list)
 
 
 def check_with_single_weight(left_scale, right_scale, weight_list):

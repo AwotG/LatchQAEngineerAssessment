@@ -11,9 +11,8 @@ from balance_weighted_scales import(
 
 logging.disable(logging.CRITICAL)
 
+
 class TestUserInput(unittest.TestCase):
-
-
     def test_user_input_file_can_not_be_found(self):
         file_name = "blurg"
         with self.assertRaises(SystemExit) as ce:
@@ -32,17 +31,20 @@ class TestUserInput(unittest.TestCase):
 
         dir_path.rmdir()
 
+
     def test_scale_values_too_many(self):
         value = ["1", "-1", "0"]
         with self.assertRaises(SystemExit) as ce:
             validate_and_parse_values(value,"scale")
         self.assertEqual(ce.exception.code, ValueError)
 
+
     def test_scale_values_too_few(self):
         value = ["1"]
         with self.assertRaises(SystemExit) as ce:
             validate_and_parse_values(value,"scale")
         self.assertEqual(ce.exception.code, ValueError)
+
 
     def test_weight_values_too_few(self):
         value = []
@@ -72,6 +74,7 @@ class TestUserInput(unittest.TestCase):
             check_with_single_weight(left_scale,right_scale,weights),
             "1")
 
+
     def test_single_weight_answer_false(self):
         left_scale = 3
         right_scale = 4
@@ -89,6 +92,7 @@ class TestUserInput(unittest.TestCase):
             check_with_two_weights(left_scale,right_scale,weights),
             "3,6")
 
+
     def test_two_weight_answer_true(self):
         left_scale = 13
         right_scale = 4
@@ -100,3 +104,4 @@ class TestUserInput(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+    
