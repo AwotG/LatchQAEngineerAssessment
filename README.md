@@ -1,6 +1,6 @@
-# Latch QA Engineer Take Home Assessment
+# QA Engineer Take Home Assessment
 
-Latch assignment to assess canidates. Detailed instructions found here:
+Assignment to assess canidates. Detailed instructions found here:
 [Instructions](test_instructions.pdf)
 
 ## Getting Started
